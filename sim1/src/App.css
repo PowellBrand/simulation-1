@@ -1,0 +1,31 @@
+body{
+  background: white;
+  overflow-x: hidden;
+}
+/* 22c-2 */
+.top-section{
+  width: 100%;
+  height: 100px;
+  background: #AB2A19;
+  }
+/* 22C-1 */
+#shelfie{
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+  position: relative;
+  top: 40px;
+  left: 450px;
+}
+
+.shelf{
+  width: 300px;
+  height: 55px;
+  background: #d34735;
+  margin-bottom: 15px;
+  border-radius: 3px;
+  position: relative;
+  top: 23px;
+  left: 450px;
+}
