@@ -1,27 +1,37 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-const cors = require('cors');
-const taskCtrl = require('./Controller/controller')
+const express = require('express');
+const bodyParser = require('body-parser');
+const massive = require('massive');
+const connectionString = 'postgres://dwtwxsktdfttqb:1fe3bd107add2659d23833c5618ea8713e50d7b5e106ad9a252a7bb850bca566@ec2-54-235-76-111.compute-1.amazonaws.com:5432/d4nedsonlfpaev?ssl=true';
 
-//create our server
-const app = new express();
-const port = 4000;
-//apply middleware
-app.use(cors());
+
+const app = express();
+
 app.use(bodyParser.json());
+const port = 3000;
 
-//end points
+app.get('/api/shelf/:id', (req, res) => {
+  res.send('massive-demo');
+});
 
-//app.get, 
-app.get('/api/get', taskCtrl.getProduct);
-//app.post
-app.post('/api/create', taskCtrl.saveProduct);
-//app.update
-app.put('/api/update/:id', taskCtrl.update);
-//app.delete
-app.delete('/api/delete/:id', taskCtrl.delete);
+app.get('/api/bin/:id', (req, res) => {
+  res.send([]);
+});
 
-//make server listener
-app.listen(port, ()=>{
-    console.log(`I'm here on port ${port}`);
+app.put('/api/bin/:id', (req, res) => {
+  res.send([]);
+});
+
+app.post('/api/bin/:id', (req, res) => {
+  res.send({ id: 123 });
+});
+
+app.delete('/api/bin/:id', (req, res) => {
+  res.send({ id: 123 });
+});
+
+massive(connectionString).then(db => {
+  app.set('db', db)
+  app.listen(port, () => {
+    console.log('Started server on port', port);
   });
+});
