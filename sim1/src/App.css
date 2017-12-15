@@ -25,7 +25,11 @@ body{
   background: #d34735;
   margin-bottom: 15px;
   border-radius: 3px;
+  display: flex;
+  flex-direction: column;
   position: relative;
   top: 23px;
   left: 450px;
+  color: white;
+  text-align: center;
 }

@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
+import { Route, Switch, Link } from 'react-router-dom';
 
 
-export default class main extends Component {
+// 37E-2
+export default class Home extends Component {
    
     render() {
         return (
-            //change from "top-section" to main-div
+            // 36G
             <section className="main-section">
                 <div className='shelf'><span className='shelf-span'>Shelf A</span></div>
                 <div className='shelf'><span className='shelf-span'>Shelf B</span></div>

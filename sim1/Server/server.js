@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require('cors');
-const taskCtrl = require('./Controller/taskController')
+const taskCtrl = require('./Controller/controller')
 
 //create our server
 const app = new express();
@@ -23,5 +23,5 @@ app.delete('/api/delete/:id', taskCtrl.delete);
 
 //make server listener
 app.listen(port, ()=>{
-    console.log(`I'm listening on port ${port}`);
+    console.log(`I'm here on port ${port}`);
   });

@@ -1,12 +1,14 @@
+// 37E-1
 import React, { Component } from 'react';
 import './reset.css';
 import './App.css';
+import { Route, Switch, Link } from 'react-router-dom';
 import Header from './Components/Header';
-import Main from './Components/Main';
+import Home from './Components/Home';
 
 
 class App extends Component {
-  
+
   // 36C
   constructor() {
     super()
@@ -19,8 +21,9 @@ class App extends Component {
   render() {
     return (
       <div>
+        
         <Header />
-        <Main />
+        <Home />
       </div>
     );
   }
