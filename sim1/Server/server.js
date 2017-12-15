@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const massive = require('massive');
-// 70C
+// 70C 
 const connectionString = 'postgres://dwtwxsktdfttqb:1fe3bd107add2659d23833c5618ea8713e50d7b5e106ad9a252a7bb850bca566@ec2-54-235-76-111.compute-1.amazonaws.com:5432/d4nedsonlfpaev?ssl=true';
 
 
@@ -9,7 +9,7 @@ const app = express();
 
 app.use(bodyParser.json());
 const port = 3000;
-
+//end at 12:32 pm
 app.get('/api/shelf/:id', (req, res) => {
   res.send('massive-demo');
 });
